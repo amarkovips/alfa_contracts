@@ -23,7 +23,7 @@ const ContractorsInfo = () => {
       { bank: 'Банк' },
       { bik: 'БИК' },
       { ks: 'КС' },
-      { payment_order: 'Очередность платежа' },
+      // { payment_order: 'Очередность платежа' },
     ],
     roles: [
       { merchant: 'merchant' },
@@ -56,6 +56,13 @@ const ContractorsInfo = () => {
     )
   }
 
+  const toContracts = () => {
+    dispatch(setNavigation('contracts'))
+    dispatch(
+      setTransactionsFilter({ name: 'ref', value: currentContractor!.ref })
+    )
+  }
+
   if (currentContractor)
     return (
       <div className={styles['component']}>
@@ -83,6 +90,9 @@ const ContractorsInfo = () => {
           </Button>
           <Button size="s" onClick={toTransactions}>
             Транзакции
+          </Button>
+          <Button size="s" onClick={toContracts}>
+            Контракты
           </Button>
         </div>
       </div>
