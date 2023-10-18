@@ -1,36 +1,39 @@
-import React, { useCallback } from 'react';
-import ThemeProvider from 'arui-feather/theme-provider';
-import Header from '../components/Header';
-import Menu from '../components/Menu';
-import Contracts from '../components/Contracts';
-import Tranches from '../components/Tranches';
-import Transactions from '../components/Transactions';
-import Reports from '../components/Reports';
-import Layout from '../components/UI/Layout';
-import Auth from '../components/Auth';
+import React, { useCallback } from 'react'
+import ThemeProvider from 'arui-feather/theme-provider'
+import Header from '../components/Header'
+import Menu from '../components/Menu'
+import Contractors from '../components/Contractors'
+import Contracts from '../components/Contracts'
+import Tranches from '../components/Tranches'
+import Transactions from '../components/Transactions'
+import Reports from '../components/Reports'
+import Layout from '../components/UI/Layout'
+import Auth from '../components/Auth'
 
-import styles from './app.module.css';
-import { useAppSelector } from '../hooks/useAppSelector';
+import styles from './app.module.css'
+import { useAppSelector } from '../hooks/useAppSelector'
 
 export function App() {
-  const { isAuth, navigation } = useAppSelector((state) => state.app);
+  const { isAuth, navigation } = useAppSelector((state) => state.app)
   const getContent = useCallback(() => {
     switch (navigation) {
+      case 'contractors':
+        return <Contractors />
       case 'contracts':
-        return <Contracts />;
+        return <Contracts />
       case 'tranches':
-        return <Tranches />;
+        return <Tranches />
       case 'transactions':
-        return <Transactions />;
+        return <Transactions />
       case 'reports':
-        return <Reports />;
+        return <Reports />
       default:
-        return <Contracts />;
+        return <Contracts />
     }
-  }, [navigation]);
+  }, [navigation])
 
   if (!isAuth) {
-    return <Auth />;
+    return <Auth />
   }
 
   return (
@@ -43,7 +46,7 @@ export function App() {
         </div>
       </div>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

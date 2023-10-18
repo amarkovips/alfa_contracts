@@ -19,6 +19,8 @@ const Auth = () => {
       <Form
         onSubmit={() => {
           console.log('try to auth');
+          dispatch(setAuth("eyJhbGciOiJSUzI1NiIsImtpZCI6IjdkMzM0NDk3NTA2YWNiNz…S7MNgPoRfkm1vzL_iDAkfwBTgVHCfjJX6GuxhrBVr51qb8sqg"));
+          
         }}
       >
         <FormField>

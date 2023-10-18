@@ -1,30 +1,30 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { PayloadAction } from '@reduxjs/toolkit/dist/createAction';
-import { IUser } from '../../models/user';
+import { createSlice } from '@reduxjs/toolkit'
+import { PayloadAction } from '@reduxjs/toolkit/dist/createAction'
+import { IUser } from '../../models/user'
 
 import * as jose from 'jose'
 
 interface AppState {
-  navigation: string;
+  navigation: string
   user: IUser
-  isAuth: boolean;
+  isAuth: boolean
 }
 
 const initialState: AppState = {
-  navigation: 'contracts',
+  navigation: 'contractors',
   isAuth: JSON.parse(localStorage.getItem('isAuth') || 'false'),
-  user: {}
-};
+  user: {},
+}
 
 const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
     setNavigation(state, action: PayloadAction<string>) {
-      state.navigation = action.payload;
+      state.navigation = action.payload
     },
     setAuth(state, action: PayloadAction<string | undefined>) {
-      localStorage.setItem('isAuth', JSON.stringify(!!action.payload));
+      localStorage.setItem('isAuth', JSON.stringify(!!action.payload))
       if (typeof action.payload === 'string') {
         const credentials = jose.decodeJwt(action.payload);
         state.user = {name: credentials.name as string};
@@ -34,7 +34,7 @@ const appSlice = createSlice({
       }
     },
   },
-});
+})
 
-export const { setNavigation, setAuth } = appSlice.actions;
-export default appSlice.reducer;
+export const { setNavigation, setAuth } = appSlice.actions
+export default appSlice.reducer
