@@ -1,0 +1,31 @@
+.component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 20px;
+
+  .label {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 50px;
+      width: 50px;
+      background-image: url('../../assets/logo.svg');
+    }
+  }
+
+  .control {
+    display: flex;
+    align-items: center;
+
+    .separator {
+      margin: 0 10px;
+    }
+  }
+}
+
+.role {
+  font-size: 13px !important;
+}

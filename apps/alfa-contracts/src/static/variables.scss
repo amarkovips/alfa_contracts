@@ -1,0 +1,60 @@
+//COLORS
+$dark-indigo: #0a1e32;
+
+$sidebar-color: #222a32;
+$text-header-color: #223547;
+$sidebar-nav-border: 1px solid hsla(0, 0%, 100%, 0.08);
+$sidebar-active-link: hsla(0, 0%, 100%, 0.1);
+$header-border-bottom: 1px solid #dfe2ec;
+
+$table-border-bottom: 1px solid rgba(10, 30, 50, 0.05);
+
+$font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+  Open Sans, Helvetica Neue, Roboto Rouble, sans-serif;
+
+$alf: #ef3124;
+$create: #cacfd4;
+$refund: #1385d2;
+$success: #299302;
+
+$background: white;
+
+//SIZE
+
+//Отступ в заголовке главной страницы
+$main-header-padding: 3rem;
+
+//Ширин навигации
+$navigation-sidebar-width: 230px;
+
+//Лого навигация
+$navigation-margin-top: 86px;
+
+//Высота заголовка
+$navigation-header-phone-height: 60px;
+
+//Высота заголовка контейнера с контентом
+$content__container-header: 60px;
+
+$content__container-header_phone: 50px;
+
+//Время анимации
+$navbars-all-animation-time: 0.4s;
+
+//Разрешение экрана
+$resolution-phone: 768px;
+$resolution-phone-960: 960px;
+$resolution-tablet: 1280px;
+
+//Цвета статусов
+$secondary: #b9b9b9;
+$primary: #6d7986;
+$success: #86ca6d;
+$warning: orange;
+$default: #a5c3fa;
+$error: #ff7272;
+$accent: #959bff;
+
+:export {
+  width: $resolution-phone;
+}

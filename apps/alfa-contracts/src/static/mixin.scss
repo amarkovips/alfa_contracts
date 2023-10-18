@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin phone {
+  @media (max-width: $resolution-phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $resolution-tablet) {
+    @content;
+  }
+}
+
+@mixin phone-960 {
+  @media (max-width: $resolution-phone-960) {
+    @content;
+  }
+}

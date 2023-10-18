@@ -1,0 +1,38 @@
+.table {
+  display: block;
+  max-height: 180px;
+  overflow-y: scroll;
+  border-collapse: collapse;
+}
+.table .header {
+  border-bottom: 1px solid #dfe2ec;
+  align-items: center;
+}
+.table .row:nth-child(even) {
+  background-color: ghostwhite;
+}
+.table .col {
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+}
+.table .cell {
+  display: flex;
+  align-items: center;
+}
+.table .sort {
+  cursor: pointer;
+  width: 15px;
+}
+.table .row .col {
+  font-size: 13px;
+}
+.table .row.selected {
+  background-color: #89a5c9 !important;
+}
+.table .row:hover {
+  cursor: pointer;
+  background-color: #b0cef6;
+}
+
+/*# sourceMappingURL=index.module.css.map */

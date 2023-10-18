@@ -1,0 +1,29 @@
+.component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.component .label {
+  display: flex;
+  align-items: center;
+}
+.component .label .logo {
+  height: 50px;
+  width: 50px;
+  background-image: url("../../assets/logo.svg");
+}
+.component .control {
+  display: flex;
+  align-items: center;
+}
+.component .control .separator {
+  margin: 0 10px;
+}
+
+.role {
+  font-size: 13px !important;
+}
+
+/*# sourceMappingURL=header.module.css.map */

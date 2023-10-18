@@ -1,0 +1,21 @@
+.component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  form {
+    border-bottom: 1px solid #bab9b9;
+  }
+
+  .google {
+    margin-top: 30px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,46 @@
+.table {
+  display: block;
+  max-height: 180px;
+  overflow-y: scroll;
+  border-collapse: collapse;
+
+  .header {
+    border-bottom: 1px solid #dfe2ec;
+    align-items: center;
+  }
+
+  .row:nth-child(even) {
+    background-color: ghostwhite;
+  }
+
+  .col {
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .cell {
+    display: flex;
+    align-items: center;
+  }
+
+  .sort {
+    cursor: pointer;
+    width: 15px;
+  }
+
+  .row {
+    .col {
+      font-size: 13px;
+    }
+  }
+
+  .row.selected {
+    background-color: #89a5c9 !important;
+  }
+
+  .row:hover {
+    cursor: pointer;
+    background-color: #b0cef6;
+  }
+}

@@ -1,0 +1,9 @@
+.menu .item {
+  display: flex;
+  align-items: center;
+}
+.menu .item span {
+  margin-left: 5px;
+}
+
+/*# sourceMappingURL=index.module.css.map */

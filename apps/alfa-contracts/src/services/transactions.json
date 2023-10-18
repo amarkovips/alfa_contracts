@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1001,
+    "card_number": "5521 3673 3884 3481",
+    "amount": "50.23",
+    "currency": "810",
+    "device_number": 112323,
+    "operation_type": 680,
+    "operation_date": 1689612268914,
+    "tid": "123",
+    "mid": "321",
+    "utrno": 5498393433,
+    "auth_code": "456",
+    "aggregation": ["AGGR1_PARAM", "AGGR2_PARAM"],
+    "other": "Какое-то поле",
+    "ref": 0
+  },
+  {
+    "id": 1002,
+    "card_number": "4121 3672 3281 0990",
+    "amount": "81.77",
+    "currency": "810",
+    "device_number": 113412,
+    "operation_type": 680,
+    "operation_date": 1689390000000,
+    "tid": "123",
+    "mid": "321",
+    "utrno": 54983961721,
+    "auth_code": "456",
+    "aggregation": ["AGGR1_PARAM", "AGGR2_PARAM"],
+    "other": "Какое-то поле",
+    "ref": 1
+  },
+  {
+    "id": 1003,
+    "card_number": "5212 4123 3281 5512",
+    "amount": "-500.33",
+    "currency": "810",
+    "device_number": 112323,
+    "operation_type": 680,
+    "operation_date": 1689612268914,
+    "tid": "123",
+    "mid": "321",
+    "utrno": 54983961722,
+    "auth_code": "456",
+    "aggregation": ["AGGR1_PARAM", "AGGR2_PARAM"],
+    "other": "Какое-то поле",
+    "ref": 2
+  }
+]

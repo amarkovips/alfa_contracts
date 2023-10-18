@@ -1,0 +1,263 @@
+@import 'mixin';
+@import 'variables';
+
+body,
+html {
+  font-family: $font-family;
+  color: #1a2737;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: $background;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 32px;
+  margin: 0;
+  color: #1a2737;
+}
+
+h2 {
+  font-family: $font-family;
+  height: 25px;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  color: #223547;
+}
+
+h3 {
+  font-family: $font-family;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3f3f40;
+}
+
+div[style*='position: absolute; top: 0px; left: 0px; width: 100%;'] {
+  position: relative !important;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.page {
+  margin: 2rem 3rem;
+  background-color: white;
+
+  @include phone {
+    margin: 2rem 1rem;
+  }
+
+  &--no-margin {
+    margin: 2rem 0;
+  }
+}
+
+.popup {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: Roboto Rouble;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../../../../node_modules/arui-feather/font/font_roboto-rouble_light.woff');
+}
+
+@font-face {
+  font-family: Roboto Rouble;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../../../node_modules/arui-feather/font/font_roboto-rouble_regular.woff');
+}
+
+@font-face {
+  font-family: Roboto Rouble;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../../../node_modules/arui-feather/font/font_roboto-rouble_medium.woff');
+}
+
+@font-face {
+  font-family: Roboto Rouble;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../../../node_modules/arui-feather/font/font_roboto-rouble_bold.woff');
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  left: -10px;
+  z-index: 1;
+  min-width: 250px;
+  box-shadow: 0 1px 5px 0 rgba(11, 31, 53, 0.25);
+}
+
+.dropdown--active .dropdown__content {
+  display: block;
+}
+
+.attach__error {
+  font-size: 13px;
+  color: rgba(255, 92, 92, 1);
+  padding-top: 5px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.table {
+  &__row {
+    position: relative;
+    display: table-row;
+    width: 100%;
+    &--thead {
+      border-bottom: 1px solid #e2e2e2;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  &__empty {
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(11, 31, 53, 0.6);
+  }
+
+  &__col {
+    display: table-cell;
+    padding: 10px;
+    width: auto;
+    vertical-align: middle;
+
+    &--short {
+      min-width: 30px;
+    }
+
+    &--medium {
+      min-width: 100px;
+    }
+
+    &--long {
+      min-width: 200px;
+    }
+
+    &--additional {
+      width: 30px;
+      text-align: center;
+
+      .icon-button {
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .link__text {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+  }
+
+  &__tbody {
+    position: relative;
+    display: table-row-group;
+    width: 100%;
+    font-size: 13px;
+
+    .table__row:nth-child(2n) {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.tooltip {
+  padding: 10px;
+  &--text {
+    line-height: 1.45;
+  }
+}
+
+.tabs__content {
+  z-index: 1;
+}
+
+.text-link {
+  color: #f15045;
+  cursor: pointer;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.content__spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+select[disabled] {
+  cursor: not-allowed;
+}
+
+.tippy-tooltip {
+  -webkit-font-smoothing: initial;
+}
+
+.notification-mp3 {
+  .notification__content {
+    line-height: 1.4;
+  }
+
+  a,
+  a:hover,
+  a:focus,
+  a:visited {
+    color: #ffffff;
+  }
+}

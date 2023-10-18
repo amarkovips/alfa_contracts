@@ -1,0 +1,8 @@
+/* Your styles goes here. */
+.content {
+  padding: 20px;
+}
+
+.window {
+  display: flex;
+}
