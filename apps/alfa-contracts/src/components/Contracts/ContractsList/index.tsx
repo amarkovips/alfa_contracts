@@ -33,10 +33,6 @@ const ContractsList = () => {
     setContracts(data || []);
   }, [data]);
 
-  useEffect(() => {
-    contracts && dispatch(setCurrentContract(contracts[0]))
-  }, [contracts])
-
   const sortNumbers = (data: string) => {
     setOrder(!order);
     const sorted = [...contracts].sort((contract: IContract, next: IContract) =>
@@ -67,6 +63,7 @@ const ContractsList = () => {
     <table className={styles['table']}>
       <thead>
         <tr className={styles['header']}>
+          <th className={styles['col']}>Тип</th>
           <th className={styles['col']}>
             <div className={styles['cell']}>
               Дата договора{' '}
@@ -95,8 +92,6 @@ const ContractsList = () => {
             </div>
           </th>
           <th className={styles['col']}>Банковские реквизиты</th>
-          <th className={styles['col']}>ИНН</th>
-          <th className={styles['col']}>Тип</th>
         </tr>
       </thead>
       <tbody>
@@ -108,14 +103,13 @@ const ContractsList = () => {
               contract.number === current_contract?.number ? styles['selected'] : ''
             }`}
           >
+            <td className={styles['col']}>{contract.type}</td>
             <td className={styles['col']}>
               {new Date(contract.date).toLocaleDateString()}
             </td>
             <td className={styles['col']}>{contract.number}</td>
             <td className={styles['col']}>{contract.company_name}</td>
             <td className={styles['col']}>{contract.bank_details}</td>
-            <td className={styles['col']}>{contract.inn}</td>
-            <td className={styles['col']}>{contract.type}</td>
           </tr>
         ))}
       </tbody>

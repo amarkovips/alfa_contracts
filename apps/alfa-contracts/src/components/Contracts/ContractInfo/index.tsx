@@ -31,7 +31,7 @@ const ContractInfo = () => {
       { bik: 'БИК' },
       { ks: 'КС' },
       { personal_account: 'Лицевой счет' },
-      // { payment_order: 'Очередность платежа' },
+      { payment_order: 'Очередность платежа' },
       // { bank_accounts: 'Счета в банке' },
     ],
     reports: [{ email: 'e-mail' }, { sftp: 'SFTP' }, { eq_id: 'НИБ (EQ ID)' }],
