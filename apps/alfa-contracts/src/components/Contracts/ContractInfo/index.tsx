@@ -64,13 +64,11 @@ const ContractInfo = () => {
           list: [
             {
               key: 'emails',
-              value: 'Адреса: ' + contract['email'].map((elem: any, index: number) => (
-                <span key={index}>{elem}<br/></span>
-              ))
+              value: 'Адреса: ' + contract['email'].map((elem: string) => elem)
             },
             {
               key: 'eq_id',
-              value: contract['eq_id']
+              value: 'EQ ID: ' + contract['eq_id']
             }
           ]
         },
@@ -84,7 +82,7 @@ const ContractInfo = () => {
             },
             {
               key: 'username',
-              value: 'Имя пользователя ' + contract['username']
+              value: 'Имя пользователя: ' + contract['username']
             }
           ]
         }
