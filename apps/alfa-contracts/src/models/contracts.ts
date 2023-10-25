@@ -7,6 +7,7 @@ export interface IContract extends IObjectKeys {
   company_name: string;
   bank_details: number;
   inn: number;
+  ogrn: number;
   aggregation_scheme: string;
   segment: string;
   bank_accounts: number[];
@@ -15,11 +16,11 @@ export interface IContract extends IObjectKeys {
   bik: string;
   ks: number;
   payment_order: number;
-  other: string;
   email: string[];
   sftp: string;
   eq_id: string;
   tariff: string;
+  type: string;
 }
 
 interface IObjectKeys {
