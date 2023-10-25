@@ -30,8 +30,17 @@ const TransactionsList = () => {
   }, [need_refetch]);
 
   useEffect(() => {
-    setTransactions(data || []);
+    if (data) {
+      const transactions = maskCardNumber(data);
+      setTransactions(transactions);
+    }
   }, [data]);
+
+  const maskCardNumber = (data: ITransaction[]) =>
+    data.map((transaction: ITransaction) => ({
+      ...transaction,
+      card_number: transaction.card_number.slice(0, 7) + "XX XXXX " + transaction.card_number.slice(-4),
+    }));
 
   const sortNumbers = (data: string) => {
     setOrder(!order);
