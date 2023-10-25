@@ -27,7 +27,8 @@
     "sftp": "sftp.domain1.ru/reports",
     "eq_id": "H12323",
     "tariff": "{}",
-    "ref": 0
+    "ref": 0,
+    "type": "Договор с торговцем"
   },
   {
     "date": 1689390000000,
@@ -57,7 +58,8 @@
     "sftp": "sftp.domain1.ru/reports",
     "eq_id": "H12323",
     "tariff": "{}",
-    "ref": 1
+    "ref": 1,
+    "type": "Договор с фасилитатором"
   },
   {
     "date": 1689562800000,
@@ -87,7 +89,8 @@
     "sftp": "sftp.domain1.ru/reports",
     "eq_id": "H12323",
     "tariff": "{}",
-    "ref": 2
+    "ref": 2,
+    "type": "Договор с платежным провайдером"
   },
   {
     "date": 1689612268914,
@@ -117,7 +120,8 @@
     "sftp": "sftp.domain1.ru/reports",
     "eq_id": "H12323",
     "tariff": "{}",
-    "ref": 3
+    "ref": 3,
+    "type": "Договор с торговцем"
   },
   {
     "date": 1688958000000,
@@ -147,7 +151,8 @@
     "sftp": "sftp.domain1.ru/reports",
     "eq_id": "H12323",
     "tariff": "{}",
-    "ref": 4
+    "ref": 4,
+    "type": "Договор с торговцем"
   },
   {
     "date": 1689390000000,
@@ -177,7 +182,8 @@
     "sftp": "sftp.domain1.ru/reports",
     "eq_id": "H12323",
     "tariff": "{}",
-    "ref": 5
+    "ref": 5,
+    "type": "Договор с фасилитатором"
   },
   {
     "date": 1689612268914,
@@ -207,7 +213,8 @@
     "sftp": "sftp.domain1.ru/reports",
     "eq_id": "H12323",
     "tariff": "{}",
-    "ref": 6
+    "ref": 6,
+    "type": "Договор с фасилитатором"
   },
   {
     "date": 1689612268914,
@@ -237,6 +244,7 @@
     "sftp": "sftp.domain1.ru/reports",
     "eq_id": "H12323",
     "tariff": "{}",
-    "ref": 7
+    "ref": 7,
+    "type": "Договор с платежным провайдером"
   }
 ]

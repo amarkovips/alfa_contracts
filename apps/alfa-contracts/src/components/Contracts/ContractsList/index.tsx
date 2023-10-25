@@ -96,6 +96,7 @@ const ContractsList = () => {
           </th>
           <th className={styles['col']}>Банковские реквизиты</th>
           <th className={styles['col']}>ИНН</th>
+          <th className={styles['col']}>Тип</th>
         </tr>
       </thead>
       <tbody>
@@ -114,6 +115,7 @@ const ContractsList = () => {
             <td className={styles['col']}>{contract.company_name}</td>
             <td className={styles['col']}>{contract.bank_details}</td>
             <td className={styles['col']}>{contract.inn}</td>
+            <td className={styles['col']}>{contract.type}</td>
           </tr>
         ))}
       </tbody>
