@@ -21,6 +21,7 @@
       "contracts@omacs.ru"
     ],
     "sftp": "sftp.omacs.ru/reports",
+    "username": "omacs",
     "eq_id": "H12323",
     "tariff": "{}",
     "ref": 0,
@@ -47,6 +48,7 @@
       "info@arkasil.ru"
     ],
     "sftp": "sftp.arkasil.ru/",
+    "username": "arkasil",
     "eq_id": "H12232",
     "tariff": "{}",
     "ref": 1,
@@ -73,6 +75,7 @@
       "info@af.ru"
     ],
     "sftp": "sftp.aeroflot.ru/",
+    "username": "aeroflot",
     "eq_id": "H1324323",
     "tariff": "{}",
     "ref": 2,

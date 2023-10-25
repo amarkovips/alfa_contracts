@@ -18,6 +18,7 @@ export interface IContract extends IObjectKeys {
   payment_order: number;
   email: string[];
   sftp: string;
+  username: string;
   eq_id: string;
   tariff: string;
   type: string;
