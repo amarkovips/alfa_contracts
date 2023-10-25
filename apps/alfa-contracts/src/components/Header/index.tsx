@@ -7,13 +7,19 @@ import { setAuth } from '../../store/reducers/app';
 
 const Header = () => {
   const dispatch = useAppDispatch();
-  const { name } = useAppSelector((state) => state.app.user);
+  const { user: {name}, navigation } = useAppSelector((state) => state.app);
+  const menuMap:{[key:string]: string} = {
+    contractors: 'Контрагенты',
+    contracts: 'Договоры',
+    tranches: 'Проводки',
+    transactions: 'Транзакции',
+    reports: 'Отчеты'
+  }
   return (
     <div className={styles['component']}>
       <div className={styles['label']}>
-        <div className={styles['logo']} />
         <Typography.TitleResponsive tag="div" view="small">
-          Альфа-Банк. Система расчетов
+          {menuMap[navigation]}
         </Typography.TitleResponsive>
       </div>
       <div className={styles['auth']}>

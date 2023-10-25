@@ -2,28 +2,36 @@
   {
     "merchant": 198,
     "company_name": "ООО Василек",
+    "inn": 23892839231,
+    "ogrn": "1127746132755",
     "bank_details": 40817192901924389,
     "personal_account": 4019230981792379123,
     "bank": "АО \"Альфа-Банк\"",
     "bik": "044343234234",
     "ks": 30123092308021831,
     "payment_order": 10,
-    "roles": ["merchant", "facilitator", "payment_provider"]
+    "roles": ["merchant", "facilitator", "payment_provider"],
+    "ref": 0
   },
   {
     "merchant": 198,
     "company_name": "ООО Василек",
+    "inn": 23892839231,
+    "ogrn": "1127746132755",
     "bank_details": 67817192901924381,
     "personal_account": 4019230981792379123,
     "bank": "АО \"Сбербанк\"",
     "bik": "044343234234",
     "ks": 21123092308021857,
     "payment_order": 10,
-    "roles": ["merchant"]
+    "roles": ["merchant"],
+    "ref": 1
   },
   {
     "merchant": 198,
     "company_name": "ООО Василек",
+    "inn": 23892839231,
+    "ogrn": "1127746132755",
     "bank_details": 52617192901924974,
     "inn": 67092839723,
     "personal_account": 4987230981792379926,
@@ -31,40 +39,50 @@
     "bik": "044343234234",
     "ks": 56123092308021898,
     "payment_order": 10,
-    "roles": ["payment_provider"]
+    "roles": ["payment_provider"],
+    "ref": 2
   },
   {
     "merchant": 199,
     "company_name": "Рога и копыта",
+    "inn": 23892839232,
+    "ogrn": "1027700230722",
     "bank_details": 62717192901924163,
     "personal_account": 1949230981792379726,
     "bank": "АО \"Альфа-Банк\"",
     "bik": "044343234234",
     "ks": 73923092308021128,
-    "payment_order": 10,
-    "roles": ["merchant", "facilitator", "payment_provider"]
+    "payment_order": 9,
+    "roles": ["merchant", "facilitator", "payment_provider"],
+    "ref": 3
   },
   {
     "merchant": 199,
     "company_name": "Рога и копыта",
+    "inn": 23892839232,
+    "ogrn": "1027700230722",
     "bank_details": 948171929019249478,
     "personal_account": 7389230981792379198,
     "bank": "АО \"Сбербанк\"",
     "bik": "044343234234",
     "ks": 21123092308021857,
-    "payment_order": 10,
-    "roles": ["merchant"]
+    "payment_order": 9,
+    "roles": ["merchant"],
+    "ref": 4
   },
   {
     "merchant": 199,
     "company_name": "Рога и копыта",
+    "inn": 23892839232,
+    "ogrn": "1027700230722",
     "bank_details": 93817192901924235,
     "inn": 94792839493,
     "personal_account": 4939230981792379390,
     "bank": "АО \"ВТБ\"",
     "bik": "044343234234",
     "ks": 95723092308021849,
-    "payment_order": 10,
-    "roles": ["payment_provider"]
+    "payment_order": 9,
+    "roles": ["payment_provider"],
+    "ref": 5
   }
 ]

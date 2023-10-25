@@ -6,7 +6,7 @@ import { api } from '../../services/api'
 
 interface ContractorsState {
   contractorsFilter: IContractorsFilter
-  current_contractor?: IContractor
+  current_contractor?: IContractor[]
   need_refetch: boolean
 }
 
@@ -23,7 +23,7 @@ const ContractorsSlice = createSlice({
       const { name, value } = action.payload
       state.contractorsFilter[name] = value
     },
-    setCurrentContractor(state, action: PayloadAction<IContractor>) {
+    setCurrentContractor(state, action: PayloadAction<IContractor[]>) {
       state.current_contractor = action.payload
     },
     setRefetch(state, action: PayloadAction<boolean>) {

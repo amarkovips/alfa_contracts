@@ -1,9 +1,8 @@
 export interface IContractorsFilter extends IObjectKeys {
   company_name?: string
-  bank?: string
-  personal_account?: number
-  bik?: string
-  ks?: number
+  ogrn?: string
+  inn?: number
+  payment_order?: string
 }
 
 export interface IContractsFilter extends IObjectKeys {

@@ -8,6 +8,9 @@ export interface IContractor extends IObjectKeys {
   ks: number
   payment_order: number
   roles: string[]
+  ogrn: string
+  inn: number
+  ref: number
 }
 
 interface IObjectKeys {

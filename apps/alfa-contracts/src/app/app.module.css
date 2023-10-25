@@ -1,8 +1,10 @@
 /* Your styles goes here. */
 .content {
-  padding: 20px;
+  margin-left: 230px;
 }
 
 .window {
   display: flex;
+  padding-left: 1rem;
+  padding-top: 86px;
 }

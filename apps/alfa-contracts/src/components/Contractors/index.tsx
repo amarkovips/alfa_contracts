@@ -3,8 +3,12 @@ import PageBlock from '../UI/PageBlock'
 import Filter from './Filter'
 import ContractorsList from './ContractorsList'
 import ContractorsInfo from './ContractorsInfo'
+import {useAppSelector } from '../../hooks/useAppSelector'
 
 const Contractors = () => {
+  const currentContractor = useAppSelector(
+    (state) => state.сontractors.current_contractor
+  )
   return (
     <Fragment>
       <PageBlock>
@@ -13,9 +17,11 @@ const Contractors = () => {
       <PageBlock>
         <ContractorsList />
       </PageBlock>
-      <PageBlock>
-        <ContractorsInfo />
-      </PageBlock>
+      {currentContractor && (
+        <PageBlock>
+          <ContractorsInfo />
+        </PageBlock>
+      )}
     </Fragment>
   )
 }

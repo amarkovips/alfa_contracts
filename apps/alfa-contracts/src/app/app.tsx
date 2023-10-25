@@ -38,13 +38,15 @@ export function App() {
 
   return (
     <ThemeProvider theme="alfa-on-white">
-      <div className={styles['content']}>
-        <Header />
-        <div className={styles['window']}>
-          <Menu />
-          <Layout>{getContent()}</Layout>
+      <>
+        <Menu />
+        <div className={styles['content']}>
+          <Header />
+          <div className={styles['window']}>
+            <Layout>{getContent()}</Layout>
+          </div>
         </div>
-      </div>
+      </>
     </ThemeProvider>
   )
 }

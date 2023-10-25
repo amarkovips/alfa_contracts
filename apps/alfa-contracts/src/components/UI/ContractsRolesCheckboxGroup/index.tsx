@@ -10,15 +10,16 @@ interface ContractsRolesCheckboxGroup {
 }
 
 const handleRole = (e: any) => {
-  console.log(e)
-}
+  console.log(e);
+};
 
 export const ContractsRolesCheckboxGroup: React.FC<
   ContractsRolesCheckboxGroup
 > = ({ roles }) => (
-  <CheckBoxGroup className={styles["checkBoxGroupCont"]}>
-    {Object.entries(ContractsRoles).map(([value, label], index) => {
-      return (
+  <div className={styles["elem"]}>
+    <div className={styles["label"]}>Роли</div>
+    <CheckBoxGroup className={styles["checkBoxGroupCont"]}>
+      {Object.entries(ContractsRoles).map(([value, label], index) => (
         <CheckBox
           key={index}
           text={label}
@@ -27,7 +28,7 @@ export const ContractsRolesCheckboxGroup: React.FC<
           checked={roles.includes(value)}
           onChange={handleRole}
         />
-      );
-    })}
-  </CheckBoxGroup>
+      ))}
+    </CheckBoxGroup>
+  </div>
 );

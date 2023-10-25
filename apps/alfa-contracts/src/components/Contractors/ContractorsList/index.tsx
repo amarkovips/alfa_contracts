@@ -50,26 +50,6 @@ const ContractorsList = () => {
     setContractors(formatContractors(data) || {});
   }, [data]);
 
-  // const sortNumbers = (data: string) => {
-  //   setOrder(!order)
-  //   const sorted = [...contractors].sort(
-  //     (contractor: IContractor, next: IContractor) =>
-  //       order ? contractor[data] - next[data] : next[data] - contractor[data]
-  //   )
-  //   setContractors(sorted)
-  // }
-
-  // const sortStrings = (data: string) => {
-  //   setOrder(!order);
-  //   const sorted = [...contractors].sort(
-  //     (contractor: IContractor, next: IContractor) =>
-  //       order
-  //         ? ("" + contractor[data]).localeCompare(next[data])
-  //         : ("" + next[data]).localeCompare(contractor[data]),
-  //   );
-  //   setContractors(sorted);
-  // };
-
   if (isLoading || isFetching) return <Spin size="s" visible={true} />;
 
   if (!contractors)
@@ -82,75 +62,26 @@ const ContractorsList = () => {
     <table className={styles["table"]}>
       <thead>
         <tr className={styles["header"]}>
-          <th className={styles["col"]}>
-            <div className={styles["cell"]}>
-              Название компании{" "}
-              {/*<ArrowUpDownHeavyMIcon
-                className={styles["sort"]}
-                onClick={() => sortStrings("company_name")}
-              />*/}
-            </div>
-          </th>
-          <th className={styles["col"]}>
-            <div className={styles["cell"]}>
-              Название банка{" "}
-              {/*<ArrowUpDownHeavyMIcon
-                className={styles["sort"]}
-                onClick={() => sortStrings("bank")}
-              />*/}
-            </div>
-          </th>
-          <th className={styles["col"]}>Лицевой счет</th>
-          <th className={styles["col"]}>БИК</th>
-          <th className={styles["col"]}>КС</th>
+          <th className={styles["col"]}>Название компании</th>
+          <th className={styles["col"]}>ОГРН</th>
+          <th className={styles["col"]}>ИНН</th>
         </tr>
       </thead>
       <tbody>
-        {Object.keys(contractors).map((company_name: string, company_index: number) => 
-          contractors[company_name].map((contractor: IContractor, index: number) => (
-            <tr
-              key={index}
-              className={`${styles["row"]} ${
-                contractor.bank_details === current_contractor?.bank_details
-                  ? styles["selected"]
-                  : ""
-              }`}
-            >
-              {index ? null : (
-                <td
-                  rowSpan={contractors[company_name].length}
-                  className={`${styles["col"]} ${styles["first-col"]}`}
-                >
-                  {company_name}
-                </td>
-              )}
-
-              <td
-                onClick={() => dispatch(setCurrentContractor(contractor))}
-                className={styles["col"]}
-              >
-                {contractor.bank}
-              </td>
-              <td
-                onClick={() => dispatch(setCurrentContractor(contractor))}
-                className={styles["col"]}
-              >
-                {contractor.personal_account}
-              </td>
-              <td
-                onClick={() => dispatch(setCurrentContractor(contractor))}
-                className={styles["col"]}
-              >
-                {contractor.bik}
-              </td>
-              <td
-                onClick={() => dispatch(setCurrentContractor(contractor))}
-                className={styles["col"]}
-              >
-                {contractor.ks}
-              </td>
-            </tr>
-          ))
+        {Object.keys(contractors).map((company_name: string, index: number) => 
+          <tr
+            key={index}
+            className={`${styles["row"]} ${
+              current_contractor && company_name === current_contractor[0].company_name
+                ? styles["selected"]
+                : ""
+            }`}
+            onClick={() => dispatch(setCurrentContractor(contractors[company_name]))}
+          >
+            <td className={styles["col"]}>{company_name}</td>
+            <td className={styles["col"]}>{contractors[company_name][0].ogrn}</td>
+            <td className={styles["col"]}>{contractors[company_name][0].inn}</td>
+          </tr>
         )}
       </tbody>
     </table>

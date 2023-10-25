@@ -24,21 +24,13 @@ const Filter = () => {
       name: 'company_name',
     },
     {
-      placeholder: 'Банк',
-      name: 'bank',
+      placeholder: 'ОГРН',
+      name: 'ogrn',
     },
     {
-      placeholder: 'Лицевой счет',
-      name: 'personal_account',
-    },
-    {
-      placeholder: 'БИК',
-      name: 'bik',
-    },
-    {
-      placeholder: 'КС',
-      name: 'ks',
-    },
+      placeholder: 'ИНН',
+      name: 'inn',
+    }
   ]
 
   const dispatch = useAppDispatch()

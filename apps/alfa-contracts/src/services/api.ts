@@ -37,22 +37,20 @@ const baseQuery =
       switch (url) {
         case urls.contractors:
           if (Object.keys(filter).length) {
-            const filtered = Object.keys(filter).length
-              ? contractors.filter((contractor: IContractor) => {
-                  let correct = true
-                  Object.keys(filter).forEach((elem: string) => {
-                    const index = contractor[elem]
-                      .toString()
-                      .toLowerCase()
-                      .indexOf(filter[elem].toString().toLowerCase())
-                    if (index === -1) {
-                      correct = false
-                      return
-                    }
-                  })
-                  return correct
-                })
-              : contractors
+            const filtered = contractors.filter((contractor: IContractor) => {
+              let correct = true
+              Object.keys(filter).forEach((elem: string) => {
+                const index = contractor[elem]
+                  .toString()
+                  .toLowerCase()
+                  .indexOf(filter[elem].toString().toLowerCase())
+                if (index === -1) {
+                  correct = false
+                  return
+                }
+              })
+              return correct
+            })
             return { data: filtered }
           } else {
             return { data: contractors }

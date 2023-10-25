@@ -3,12 +3,13 @@ import { FolderMIcon } from '@alfalab/icons-glyph/FolderMIcon'
 import { CashMoneyLineMIcon } from '@alfalab/icons-glyph/CashMoneyLineMIcon'
 import { CreditCardMIcon } from '@alfalab/icons-glyph/CreditCardMIcon'
 import { CategoryDocumentMIcon } from '@alfalab/icons-glyph/CategoryDocumentMIcon'
+import { PersonalManagerMIcon } from '@alfalab/icons-glyph/PersonalManagerMIcon';
 
 import styles from './index.module.scss'
 
 export const Contractors = () => (
   <div className={styles['item']}>
-    <FolderMIcon />
+    <PersonalManagerMIcon />
     <span>Контрагенты</span>
   </div>
 )
