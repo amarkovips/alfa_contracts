@@ -33,6 +33,10 @@ const ContractsList = () => {
     setContracts(data || []);
   }, [data]);
 
+  useEffect(() => {
+    contracts && dispatch(setCurrentContract(contracts[0]))
+  }, [contracts])
+
   const sortNumbers = (data: string) => {
     setOrder(!order);
     const sorted = [...contracts].sort((contract: IContract, next: IContract) =>

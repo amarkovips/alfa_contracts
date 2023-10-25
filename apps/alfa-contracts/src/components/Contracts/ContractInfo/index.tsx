@@ -19,22 +19,21 @@ const ContractInfo = () => {
   const tabs: ITabs = {
     about: [
       { company_name: 'Название компании' },
-      { number: 'Номер договора' },
-      { date: 'Дата договора' },
-      { aggregation_scheme: 'Схема агрегации' },
-      { segment: 'Сегмент' },
-      { bank_accounts: 'Счета в банке' },
+      // { number: 'Номер договора' },
+      // { date: 'Дата договора' },
+      { inn: 'ИНН' },
+      { ogrn: 'ОГРН' },
+      // { aggregation_scheme: 'Схема агрегации' },
+      // { segment: 'Сегмент' },
     ],
     details: [
-      { inn: 'ИНН' },
-      { personal_account: 'Лицевой счет' },
       { bank: 'Банк' },
       { bik: 'БИК' },
       { ks: 'КС' },
-      { payment_order: 'Очередность платежа' },
-      { other: 'Еще какое-то поле' },
+      { personal_account: 'Лицевой счет' },
+      // { payment_order: 'Очередность платежа' },
+      // { bank_accounts: 'Счета в банке' },
     ],
-    tariff: [{ tariff: 'Тариф' }],
     reports: [{ email: 'e-mail' }, { sftp: 'SFTP' }, { eq_id: 'НИБ (EQ ID)' }],
   };
   const currentContract = useAppSelector(
@@ -73,9 +72,9 @@ const ContractInfo = () => {
           >
             Реквизиты
           </TabItem>
-          <TabItem onClick={() => setTab('tariff')} checked={tab === 'tariff'}>
+          {/*<TabItem onClick={() => setTab('tariff')} checked={tab === 'tariff'}>
             Тарификация
-          </TabItem>
+          </TabItem>*/}
           <TabItem
             onClick={() => setTab('reports')}
             checked={tab === 'reports'}

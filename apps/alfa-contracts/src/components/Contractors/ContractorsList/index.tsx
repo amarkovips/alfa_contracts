@@ -50,6 +50,10 @@ const ContractorsList = () => {
     setContractors(formatContractors(data) || {});
   }, [data]);
 
+  useEffect(() => {
+    contractors && dispatch(setCurrentContractor(Object.values(contractors)[0]));
+  }, [contractors])
+
   if (isLoading || isFetching) return <Spin size="s" visible={true} />;
 
   if (!contractors)

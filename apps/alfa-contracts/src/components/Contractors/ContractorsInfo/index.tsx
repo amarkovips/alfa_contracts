@@ -44,7 +44,7 @@ const ContractorsInfo = () => {
         {currentContractor.map((contractor: IContractor, contractor_index: number) => (
           <tr key={contractor_index} className={styles["row"]}>
             {Object.keys(tabs.details).map((field: string, field_index: number) => (
-              <td className={styles["col"]}>{contractor[field]}</td>
+              <td className={styles["col"]} key={field_index}>{contractor[field]}</td>
             ))}
           </tr>
         ))}
